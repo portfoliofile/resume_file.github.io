@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-family:cursive;
+  }
+  html {
+    font-size: 62.5%;
+    overflow: hidden;
+  }
+  body {
+    background:rgb(75, 67, 67);
+    overflow: hidden;
+    padding-left: 350px;
+  }
+  section {
+    min-height: 100vh;
+    padding: 20px 100px;
+  }
+  .btn {
+    padding: 6px 30px;
+    /* background: coral; */
+    background: light;
+    color: rgb(53, 51, 51);
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px  lightgray;
+    display: none;
+  }
+  .btn i {
+    padding: 0 5px;
+    font-size: 18px;
+  }
+  .btn:hover {
+    border: 2px solid coral;
+    color: coral;
+    background-color: rgb(75, 67, 67);
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 350px;
+    background: rgb(43, 38, 38) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    box-shadow: 1px 1px 4px gray;
+  }
+  header .user img {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid black;
+  }
+  header .user .name {
+    font-size: 35px;
+    color: coral;
+  }
+  header .user .post {
+    font-size: 20px;
+    color: whitesmoke;
+  }
+  header .navbar {
+    width: 100%;
+  }
+  header .navbar ul {
+    list-style: none;
+    padding: 8px 30px;
+  }
+  header .navbar ul li a {
+    display: block;
+    padding: 8px;
+    margin: 10px;
+    background: #333;
+    color:coral;
+    font-size: 20px;
+    border-radius: 50px;
+  }
+  header .navbar ul li a:hover {
+    background:coral;
+    color: #333;
+  }
+  /* #menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    z-index: 1000;
+    display: none;
+  } */
+  .home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 150px;
+
+  }
+   .home img{
+    width: 270px ;
+    height: 190;
+    border-radius: 12px;
+    border: 8px solid coral;
+    object-fit: fill;
+    display: none;
+  } 
+  /* .home .slider{
+    background-image: url();
+    border: 8px solid coral;
+    border-radius: 12px;
+    width: 270px;
+    height: 190px;
+    animation-name: slider ;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  } */
+  .home h3 {
+    font-size: 25px;
+    color:white;
+  }
+  .home h1 {
+    font-size: 25px;
+    color: white;
+  }
+  .home p {
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 10px 0;
+  }
+  .home p span{
+    color: coral;
+  }
+  .home h1 span {
+    color:coral;
+    font-size: 55px;
+  }
+  .heading {
+    text-align: center;
+    margin: 0 60px;
+    font-size: 40px;
+    padding: 10px;
+    border-bottom: 1px solid #fff4;
+    color: white;
+    
+  }
+  .heading span {
+    color: coral;
+  }
+  .about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  .about .row .info {
+    flex: 1 480px;
+    padding: 20px 1px;
+    padding-left: 60px;
+  }
+  .about .row .info h3 {
+    font-size: 20px;
+    color: coral;
+    padding: 10px 0;
+    font-weight: normal;
+  }
+  .about .row .info h3 span {
+    color: white;
+    padding: 0 5px;
+    
+  }
+  
+  .Skills .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    padding-left: 30px;
+  }
+  .Skills .box-container .box {
+    width: 270px;
+    margin: 40px 10px;
+    padding-left: 20px solid white;
+    position: relative;
+  }
+  .Skills .box-container .box span {
+    font-size: 13px;
+    background: #222;
+    color: white;
+    border-radius: 50px;
+    padding: 5px 25px;
+  }
+  .Skills .box-container .box h3 {
+    font-size: 20px;
+    color:coral;
+    padding-top: 15px;
+  }
+  .Skills .box-container .box p {
+    font-size: 14px;
+    color: whitesmoke;
+    padding: 12px;
+  }
+  .Skills .box-container .box i {
+    position: absolute;
+    left: -25px;
+    top: -10px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    background: coral;
+   }
+
+
+
+   
+   /*
+  .portfolio .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+  .portfolio .box-container .box {
+    height: 200px;
+    width: 260px;
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .portfolio .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .portfolio .box-container .box:hover img {
+    transform: scale(12px);
+  } */
+  .contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact .row .content {
+    flex: 1 1 300px;
+    padding: 40px;
+    padding-bottom: 0;
+  }
+  .contact .row .content .title {
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  .contact .row .content .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    /* color: cyan  ; */
+    color: coral;
+    padding: 10px 0;
+  }
+  .contact .row .content .info h3 i {
+    padding-right: 10px;
+    color:white;
+  }
+@keyframes slider {
+  34%{ background-image: url(p1.jpg);}
+  67%{ background-image: url(p2.jpg);}
+  100%{ background-image: url(p3.jpg);}
+}
+  
+  @media only screen and (min-width:992px) and (max-width: 1200px) {
+    html {
+      font-size: 55%;
+    }
+    .home {
+      padding: 10px 40px;
+    }
+    
+  }
+  @media only screen and (min-width: 220px) and (max-width: 991px)   {
+    header {
+      left: -120%;
+    }
+    section{
+      padding: 40px 20px;
+    }
+    .home{
+      padding: 0 25px;
+    }
+    .home h3{
+      display: none;
+    }
+    .home img{
+    display: block;
+    
+    }
+    .about{
+      padding: 50px 8px;
+    }
+    .Skills .box-container{
+      padding: 4px 0;
+    }
+    .Skills .box-container .box{
+      margin: 16px 10px;
+    }
+    .Skills .box-container .box p{
+      padding: 5px;
+    }
+    .Skills .box-container .box h3{
+      padding-top: 8px;
+    }
+    .contact .heading{
+      margin: 0 30px;
+    }
+    #menu {
+      display: block;
+    }
+    body {
+      padding: 0;
+    }
+    .btn{
+      display: block;
+      
+    }
+  }/* 
+  @media (max-width: 768px) {
+    html {
+      font-size: 50%;
+    }
+    .btn{
+      display: block;
+
+    }
+  } */
+  /* @media only screen and (min-width:200px) and (max-width: 567px) {
+    header {
+      left: -120%;
+    }/* }
+    .heading {
+      margin: 0 30px;
+    }
+    .about .row .counter .box {
+      width: 100%;
+    }
+    .Skills .box-container .box {
+      width: 100vw;
+    }
+    /* .portfolio .box-container .box {
+      width: 100vw;
+    }
+    section{
+      height: 100vh;
+    }
+    .btn{
+      display: block;
+    }
+  } */ 
+
+.typewriter{
+  color: white;
+}

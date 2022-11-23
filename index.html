@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio file</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- portfolio script -->
+    <!-- portfolio style -->
+    <style>
+
+
+
+      .xyz{
+        margin-top: 20px;
+        margin-bottom: 13px;
+        font-size:27px;
+        font-family: 'Times New Roman', Times, serif;
+        color: coral;
+        
+      }
+      .mySlides{
+            margin-left: 230px;
+      }
+      </style>
+  </head>
+  <body>
+    <header>
+    
+      <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff color:white}";
+        document.body.appendChild(css);
+    };</script>
+
+      <div class="user">
+        <img src="d12.jpeg" alt="Dipti" />
+        <!-- <h3 class="name">Dipti Rana</h3> -->
+        <h1>
+          <a href="" class="typewrite" data-period="2000" data-type='[ "I am software developer.", "I am php developer.", "I am Creative.", "I Love to Develop." ]' style="color:aliceblue">
+            <span class="wrap"></span>
+          </a>
+        </h1>
+        
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <!-- <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Skills">Skills</a></li> -->
+          <!-- <li><a href="#portfolio">portfolio</a></li> -->
+          <!-- <li><a href="#contact">contact</a></li> -->
+
+          <li><a href="#home" class="active"><i class="fa-solid fa-house-user"></i>Home</a></li><br>
+                    <li><a href="#about"><i class="fa-solid fa-user"></i></i>About</a></li><br>
+                    <li><a href="#Skills"><i class="fas fa-graduation-cap"></i>Skills</a></li><br>
+                    <li><a href="#portfolio"><i class="fa-solid fa-business-time"></i>Portfolio</a></li><br>
+                    <li><a href="#contact"><i class="fa-solid fa-address-book"></i>Contact</a></li><br>
+
+          
+        </ul>
+      </nav>
+    </header>
+    <!-- <div id="menu" class="fas fa-bars">-</div> -->
+    <section id="home" class="home">
+    
+      <img src="p1.jpg" alt="">
+    
+      <h3>Hi there..!</h3>
+      <h1>I am <span>Dipti Rana</span></h1>
+      <p>I am <span >web developer</span>. I like to explore new things , And learn new things . I like work with new people. New people are new experiences.</p>
+      <a href="#about" id="btnclass">
+        <button class="btn">About me</button><i id="fas fa-user"></i></a>
+    </section>
+
+    <section class="about" id="about" >
+      <h1 class="heading"><span>about</span>me</h1>
+      <div class="row" id="xyz">
+        <div class="info">
+          <h3><span>Name:</span>Dipti N Rana</h3>
+          <h3><span>Date of Birth:</span>26 May 2003</h3>
+          <h3><span>Age:</span>20</h3>
+          <h3><span>qualification:</span> 12th Pass , ADSE(Advance diploma software engineer) Sem-2 running</h3>
+          <h3><span>post:</span>Software Developer </h3>
+          <h3><span>Experience:</span>2 years as a computer operator </h3>
+          <h3><span>language:</span>Hindi , Gujarati, English</h3>
+          <a href="#Skills" id="btnclass"><button class="btn">
+              Skills <i class="fas fa-downloaded"></i></button
+          ></a>
+        </div>
+        </div>
+    </section>
+
+    <section class="Skills" id="Skills">
+      <h1 class="heading"><span>Skills</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2021</span>
+          <h3>MS-Office</h3>
+          <!-- <p>My HTML  completed in February 2022.</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2021</span>
+          <h3>HTML</h3>
+          <!-- <p>I explore CSS in March-April</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2021</span>
+          <h3>CSS</h3>
+          <!-- <p>I have learnt javascript in April 2022</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2021</span>
+          <h3>JAVASCRIPT</h3>
+          <!-- <p>My front end development was completed in May 2022.</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2022</span>
+          <h3>BOOTSTRAP</h3>
+          <!-- <p>My front end development was completed in May 2022.</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2022</span>
+          <h3>PHP</h3>
+          <!-- <p>My front end development was completed in May 2022.</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2022</span>
+          <h3>C</h3>
+          <!-- <p>My front end development was completed in May 2022.</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2022</span>
+          <h3>C++</h3>
+          <!-- <p>My front end development was completed in May 2022.</p> -->
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2022</span>
+          <h3>JQUERY</h3>
+          <!-- <p>My front end development was completed in May 2022.</p> -->
+        </div>
+          </div>
+      <a href="#contact" id="btnclass"><button class="btn">
+        Contact me</menu> <i class="fas fa-downloaded"></i></button></a>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h1 class="heading">My <span>Portfolio</span></h1>
+      <h2 style="text-align:center;" class="xyz">Certificates</h2>
+      
+
+      <style>
+        .mySlides {display:none;}
+        </style>
+        </head>
+        
+        <body>
+        
+        <!-- <h2 class="w3-center">Automatic Slideshow</h2> -->
+        
+        <div class="slide" style="max-width:500px">
+          <img class="mySlides" src="D4.jpg" style="width:100%">
+          <img class="mySlides" src="D1.jpg" style="width:100%">
+          <img class="mySlides" src="D2.jpeg" style="width:100%">
+          <img class="mySlides" src="D3.jpeg" style="width:100%">
+          <img class="mySlides" src="D5.jpg" style="width:100%">
+          
+        </div>
+        
+        <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+
+    </section>
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>Contact </span>me</h1>
+      <div class="row">
+        <div class="content">
+          <h3 class="title">Contact info</h3>
+          <div class="info">
+            <h3><i class="fas fa-envelope"></i>ranadipti2653@gmail.com</h3>
+            <h3><i class="fas fa-phone"></i>9624855078</h3>
+            <h3><i class="fas fa-map-marker-alt"></i>Surat , india-395003</h3>
+          </div>
+        </div>
+        
+     </div>
+     <a href="#home" id="btnclass"><button class="btn">
+      Home <i class="fas fa-downloaded"></i></button
+  ></a>
+
+    </section>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+  </body>
+</html>
